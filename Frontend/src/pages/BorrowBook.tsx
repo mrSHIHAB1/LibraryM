@@ -17,7 +17,7 @@ export default function BorrowBook() {
       toast.success('Book borrowed successfully!');
       navigate('/borrow-summary');
     } catch (error) {
-      toast.error('Failed to borrow book.');
+      toast.error('Not Enough BOOKS');
     }
   };
 
@@ -41,7 +41,7 @@ export default function BorrowBook() {
           onChange={(e) => setDueDate(e.target.value)}
           className="border p-2 w-full"
         />
-        <button type="submit" className="bg-purple-500 text-white px-4 py-2 rounded">Borrow</button>
+        <button type="submit" className="bg-blue-900 text-white px-4 py-2 rounded">Borrow</button>
       </form>
     </div>
   );
