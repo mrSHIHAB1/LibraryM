@@ -15,10 +15,11 @@ export const borrowController = createApi({
       }),
       invalidatesTags: ['Borrow', 'Books'],
     }),
-    getBorrowSummary: builder.query<BorrowSummary[], void>({
-      query: () => '/borrow',
-      providesTags: ['Borrow'],
-    }),
+  getBorrowSummary: builder.query<{ data: BorrowSummary[] }, void>({
+  query: () => '/borrow',
+  providesTags: ['Borrow'],
+}),
+
   }),
 });
 
